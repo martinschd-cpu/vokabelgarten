@@ -11,8 +11,8 @@ import * as parents from './views/parents.js';
 import * as welcome from './views/welcome.js';
 
 const ROUTES = {
-  heute: { view: today, label: 'Heute', title: 'Heute', icon: 'sun' },
-  ueben: { view: practice, label: 'Üben', title: 'Üben', icon: 'target' },
+  heute: { view: today, label: 'Heute', title: 'Heute', icon: 'flower' },
+  ueben: { view: practice, label: 'Üben', title: 'Üben', icon: 'wand' },
   foto: { view: scan, label: 'Foto', title: 'Fotografieren', icon: 'camera' },
   woerter: { view: words, label: 'Wörter', title: 'Meine Wörter', icon: 'book' },
   eltern: { view: parents, label: 'Eltern', title: 'Eltern', icon: 'lock' },

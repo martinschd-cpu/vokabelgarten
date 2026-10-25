@@ -6,7 +6,7 @@ import { answerInput, choiceButtons, showFeedback } from './common.js';
 
 export async function run(container, { word, allWords, variant = 'choice', silent = false }) {
   const say = (slow) => tts.speak(word.english, slow ? { rate: 0.6 } : {});
-  add(container, 
+  add(container,
     h('p', { class: 'exercise-title' }, variant === 'choice' ? 'Hör zu: Welches Wort war das?' : 'Hör zu und schreib das Wort auf Englisch.'),
     h(
       'div',

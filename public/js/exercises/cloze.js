@@ -7,7 +7,7 @@ import { answerInput, choiceButtons, clozeParts, showFeedback, distractors } fro
 export async function run(container, { word, allWords, variant = 'choice', silent = false }) {
   const parts = clozeParts(word);
   const gap = h('span', { class: 'gap', 'aria-label': 'Lücke' }, '_____');
-  add(container, 
+  add(container,
     h('p', { class: 'exercise-title' }, 'Welches Wort fehlt?'),
     h('p', { class: 'cloze-sentence', lang: 'en' }, parts.before, gap, parts.after),
     h('p', { class: 'cloze-hint' }, word.exampleSentenceDe ? word.exampleSentenceDe : `Tipp: ${germanText(word)}`),

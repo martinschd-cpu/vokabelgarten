@@ -5,7 +5,7 @@ import { answerInput, promptCard, showFeedback } from './common.js';
 
 export async function run(container, { word, variant = 'de-en', silent = false }) {
   const toEnglish = variant === 'de-en';
-  add(container, 
+  add(container,
     promptCard({
       label: toEnglish ? 'Wie heißt das auf Englisch?' : 'Was bedeutet das auf Deutsch?',
       text: toEnglish ? germanText(word) : word.english,

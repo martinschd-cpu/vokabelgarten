@@ -1,4 +1,4 @@
-// Startseite "Heute": Tagesportion, Pflänzchen, Sterne und sanfte Motivation.
+// Startseite "Heute": Tagesportion, Blume, Sterne und sanfte Motivation.
 import { add, h, icon, plant, plantStage, stars, toast } from '../ui.js';
 import { buildDailyPlan } from '../planner.js';
 import { addDays, toDay } from '../dates.js';
@@ -117,7 +117,7 @@ export async function render(view, { rerender }) {
     }
   }
 
-  add(view, 
+  add(view,
     h(
       'section',
       { class: 'today' },

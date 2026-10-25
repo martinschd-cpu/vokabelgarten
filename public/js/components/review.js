@@ -217,7 +217,7 @@ export function renderReview(container, o) {
   });
 
   container.classList.add('review');
-  add(container, 
+  add(container,
     h(
       'div',
       { class: 'review-main' },

@@ -13,7 +13,7 @@ let selectedUnit = 'all';
 export async function render(view, { rerender }) {
   const [words, units, settings] = await Promise.all([listWords(), listUnits(), getSettings()]);
   if (!words.length) {
-    add(view, 
+    add(view,
       h('section', { class: 'practice' }, h('h1', {}, 'Üben'), h('div', { class: 'card empty' }, h('p', {}, 'Noch keine Wörter da. Fotografiere zuerst deine Vokabeln.'), h('a', { class: 'btn primary big', href: '#/foto' }, icon('camera'), 'Vokabeln fotografieren'))),
     );
     return;
@@ -31,19 +31,19 @@ export async function render(view, { rerender }) {
 
   const modes = [
     { label: 'Gemischt', desc: 'Von allem etwas', icon: 'sparkle', run: () => go('mixed') },
-    { label: 'Karteikarten', desc: 'Umdrehen und selbst prüfen', icon: 'book', run: () => go('flashcard') },
+    { label: 'Karteikarten', desc: 'Umdrehen und selbst prüfen', icon: 'cards', run: () => go('flashcard') },
     { label: 'Tippen: Deutsch zu Englisch', desc: 'Schreib das englische Wort', icon: 'edit', run: () => go('type-de-en') },
     { label: 'Tippen: Englisch zu Deutsch', desc: 'Schreib die Bedeutung', icon: 'edit', run: () => go('type-en-de') },
     tts.supported ? { label: 'Hören', desc: 'Welches Wort hörst du?', icon: 'speaker', run: () => go('listen') } : null,
     stt.supported && settings.speakingEnabled ? { label: 'Sprechen', desc: 'Sprich die Wörter nach', icon: 'mic', run: () => go('speak', pool, 8) } : null,
-    pool.length >= 2 ? { label: 'Zuordnen', desc: 'Englisch und Deutsch verbinden', icon: 'check', run: () => go('match', pool, 12) } : null,
-    pool.length >= 2 ? { label: 'Memory', desc: 'Paare finden', icon: 'image', run: () => go('memory', pool, 6) } : null,
+    pool.length >= 2 ? { label: 'Zuordnen', desc: 'Englisch und Deutsch verbinden', icon: 'heart', run: () => go('match', pool, 12) } : null,
+    pool.length >= 2 ? { label: 'Memory', desc: 'Paare finden', icon: 'butterfly', run: () => go('memory', pool, 6) } : null,
     clozeWords.length ? { label: 'Lückensatz', desc: 'Welches Wort fehlt im Satz?', icon: 'book', run: () => go('cloze', clozeWords) } : null,
-    hard.length ? { label: 'Knifflige Wörter', desc: `${hard.length} Wörter, die noch schwer sind`, icon: 'target', run: () => go('mixed', hard) } : null,
-    { label: 'Klassenarbeit üben', desc: 'Mini-Test mit 10 bis 20 Fragen', icon: 'star', run: () => startMiniTest(view, { words: pool, allWords: words, unitName: units.find((u) => u.id === selectedUnit)?.name ?? 'Alle Units', onExit: rerender }) },
+    hard.length ? { label: 'Knifflige Wörter', desc: `${hard.length} Wörter, die noch schwer sind`, icon: 'gem', run: () => go('mixed', hard) } : null,
+    { label: 'Klassenarbeit üben', desc: 'Mini-Test mit 10 bis 20 Fragen', icon: 'crown', run: () => startMiniTest(view, { words: pool, allWords: words, unitName: units.find((u) => u.id === selectedUnit)?.name ?? 'Alle Units', onExit: rerender }) },
   ].filter(Boolean);
 
-  add(view, 
+  add(view,
     h(
       'section',
       { class: 'practice' },

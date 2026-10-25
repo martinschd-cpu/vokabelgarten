@@ -125,7 +125,7 @@ function renderPhotoStep(body, { units, secrets, rerender }) {
   const busy = h('div', { class: 'busy', hidden: true, role: 'status', 'aria-live': 'polite' });
   const full = state.photos.length >= MAX_PHOTOS;
 
-  add(body, 
+  add(body,
     !secrets.accessCode
       ? h('div', { class: 'banner warn', role: 'note' }, 'Für die genaue Erkennung braucht die App den App-Code. Frag deine Eltern. ',
           h('button', { type: 'button', class: 'btn small secondary', onclick: async () => { if (await askCode()) rerender(); } }, 'Code eingeben'))
@@ -287,7 +287,7 @@ async function renderReviewStep(body, { units, settings, rerender }) {
 function renderDone(body, { rerender }) {
   const { count, unitName } = state.saved ?? { count: 0, unitName: '' };
   clear(body);
-  add(body, 
+  add(body,
     h(
       'div',
       { class: 'card done-card' },

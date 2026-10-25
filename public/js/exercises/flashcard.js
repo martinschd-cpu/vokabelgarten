@@ -35,7 +35,7 @@ export async function run(container, { word, frontLang = Math.random() < 0.5 ? '
       actions.querySelector('.btn.primary').focus({ preventScroll: true });
     };
     card.addEventListener('click', flip);
-    add(actions, 
+    add(actions,
       h('button', { type: 'button', class: 'btn soft big', onclick: () => resolve({ grade: 'wrong', selfRated: true }) }, 'Noch nicht'),
       h('button', { type: 'button', class: 'btn primary big', onclick: () => resolve({ grade: 'correct', selfRated: true }) }, icon('check'), 'Wusste ich'),
     );

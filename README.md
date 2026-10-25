@@ -1,6 +1,6 @@
 # Vokabelgarten
 
-Private Englisch-Vokabel-App für Klasse 5/6. Vokabeln aus dem Schulbuch werden in der App fotografiert, von Claude erkannt, auf einem Prüfbildschirm kontrolliert und dann täglich in kleinen Portionen gelernt. Mit jedem Lerntag wächst ein Pflänzchen.
+Private Englisch-Vokabel-App für Klasse 5/6. Vokabeln aus dem Schulbuch werden in der App fotografiert, von Claude erkannt, auf einem Prüfbildschirm kontrolliert und dann täglich in kleinen Portionen gelernt. Mit jedem Lerntag wächst eine Blume, bis sie blüht. Das Design ist verspielt in Beeren-, Rosa- und Fliedertönen, mit hellem und dunklem Modus.
 
 Keine Nutzerkonten, keine Werbung, keine Tracker, keine externen Skripte. Alle Lerndaten bleiben auf dem Gerät (IndexedDB). Der Server reicht nur Fotos an die Claude API weiter und speichert nichts.
 
@@ -168,7 +168,7 @@ scripts/vendor.js  kopiert die lokalen Assets aus node_modules
 test/              Unit-Tests (node:test) und Browser-Test
 ```
 
-Kleine Werkzeuge und warum: **Express** für den Server (bekannt, schlank), das offizielle **Anthropic SDK**, **Tesseract.js** für die Offline-Erkennung, die Schriften **Nunito** (freundlich, gut lesbar) und **OpenDyslexic** (Lesehilfe) aus Fontsource. Alles wird lokal ausgeliefert.
+Kleine Werkzeuge und warum: **Express** für den Server (bekannt, schlank), das offizielle **Anthropic SDK**, **Tesseract.js** für die Offline-Erkennung, die Schriften **Fredoka** (runde, verspielte Überschriften), **Nunito** (freundlicher, gut lesbarer Fließtext) und **OpenDyslexic** (Lesehilfe) aus Fontsource. Alles wird lokal ausgeliefert.
 
 ## Datenschutz und Sicherheit
 

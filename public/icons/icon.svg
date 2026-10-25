@@ -1,11 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#2e7d4f"/>
-  <circle cx="256" cy="230" r="150" fill="#3d9a62"/>
-  <path d="M256 330 C 250 270 262 230 256 170" stroke="#d9f2e0" stroke-width="18" fill="none" stroke-linecap="round"/>
-  <path d="M256 250 q -70 -46 -96 -8 q 40 34 96 8z" fill="#9be0b2"/>
-  <path d="M256 210 q 70 -46 96 -8 q -40 34 -96 8z" fill="#9be0b2"/>
-  <circle cx="256" cy="150" r="30" fill="#ffcf4a"/>
-  <path d="M160 330 h192 l-22 110 h-148z" fill="#e0855c"/>
-  <rect x="146" y="314" width="220" height="34" rx="12" fill="#c96f4a"/>
-  <text x="256" y="420" font-family="Nunito, Arial, sans-serif" font-weight="800" font-size="64" text-anchor="middle" fill="#fff5ec">ABC</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e63e86"/>
+      <stop offset="1" stop-color="#9a5ad6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.35">
+    <path d="M96 120c3 18 8 23 26 26-18 3-23 8-26 26-3-18-8-23-26-26 18-3 23-8 26-26z"/>
+    <path d="M420 96c2 12 5 15 17 17-12 2-15 5-17 17-2-12-5-15-17-17 12-2 15-5 17-17z"/>
+    <path d="M428 300s-22-13-22-29a12 12 0 0 1 22-7 12 12 0 0 1 22 7c0 16-22 29-22 29z"/>
+  </g>
+  <path d="M256 318 C 250 270 262 236 256 196" stroke="#7fd99e" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M256 268 q -64 -42 -88 -6 q 36 32 88 6z" fill="#8fe0aa"/>
+  <path d="M256 240 q 64 -42 88 -6 q -36 32 -88 6z" fill="#8fe0aa"/>
+  <g transform="translate(256 150)">
+    <g fill="#ffd1e4">
+      <ellipse cx="0" cy="-46" rx="30" ry="46"/>
+      <ellipse cx="0" cy="-46" rx="30" ry="46" transform="rotate(72)"/>
+      <ellipse cx="0" cy="-46" rx="30" ry="46" transform="rotate(144)"/>
+      <ellipse cx="0" cy="-46" rx="30" ry="46" transform="rotate(216)"/>
+      <ellipse cx="0" cy="-46" rx="30" ry="46" transform="rotate(288)"/>
+    </g>
+    <circle r="26" fill="#ffd166"/>
+  </g>
+  <path d="M164 318 h184 l-20 120 h-144z" fill="#ffffff"/>
+  <rect x="148" y="300" width="216" height="36" rx="18" fill="#ffe3ef"/>
+  <text x="256" y="414" font-family="Fredoka, Nunito, Arial, sans-serif" font-weight="600" font-size="60" text-anchor="middle" fill="#c2185b">ABC</text>
 </svg>

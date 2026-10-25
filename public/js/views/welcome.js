@@ -11,13 +11,13 @@ export async function render(view) {
     await saveSettings({ onboarded: true });
     location.hash = '#/heute';
   };
-  add(view, 
+  add(view,
     h(
       'section',
       { class: 'welcome' },
       plant(4, { size: 120 }),
       h('h1', {}, 'Willkommen im Vokabelgarten!'),
-      h('p', { class: 'lead' }, 'Hier lernst du deine Englisch-Vokabeln, jeden Tag ein kleines Stück. Mit jedem Lerntag wächst dein Pflänzchen.'),
+      h('p', { class: 'lead' }, 'Hier lernst du deine Englisch-Vokabeln, jeden Tag ein kleines Stück. Mit jedem Lerntag wächst deine Blume, bis sie blüht.'),
       h(
         'form',
         {

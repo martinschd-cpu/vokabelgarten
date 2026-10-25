@@ -1,5 +1,5 @@
 // Lernrunde: führt neue Wörter ein, fragt ab, wiederholt Fehler und zeigt den Abschluss.
-import { add, h, clear, icon, speakButton, stars as starRow, plant, plantStage, shuffle, confirmDialog, germanText, announce } from '../ui.js';
+import { add, h, clear, icon, speakButton, stars as starRow, plant, plantStage, shuffle, confirmDialog, germanText, announce, confetti } from '../ui.js';
 import { applyAnswer, applyPracticeAnswer, isHard } from '../leitner.js';
 import { toDay } from '../dates.js';
 import { tts, stt } from '../speech.js';
@@ -109,7 +109,7 @@ export async function startSession(root, { mode, plan, wordIds = [], type = null
       onExit();
     }
   };
-  add(root, 
+  add(root,
     h(
       'header',
       { class: 'session-bar' },
@@ -167,7 +167,7 @@ export async function startSession(root, { mode, plan, wordIds = [], type = null
         const speakNow = () => tts.speak(w.english);
         const next = h('button', { type: 'button', class: 'btn primary big', onclick: resolve }, i === words.length - 1 ? 'Los, ich probier es!' : 'Nächstes Wort', icon('next'));
         const say = settings.speakingEnabled && stt.supported ? sayAlong(w) : null;
-        add(stage, 
+        add(stage,
           h(
             'article',
             { class: 'intro-card' },
@@ -271,7 +271,7 @@ async function showSummary(root, { mode, first, byId, onExit }) {
   clear(root);
   const heading = mode === 'daily' ? 'Geschafft für heute!' : 'Runde geschafft!';
   announce(heading);
-  add(root, 
+  add(root,
     h(
       'section',
       { class: 'summary' },
@@ -297,5 +297,6 @@ async function showSummary(root, { mode, first, byId, onExit }) {
       ),
     ),
   );
+  confetti(root);
   root.querySelector('.btn.primary').focus();
 }

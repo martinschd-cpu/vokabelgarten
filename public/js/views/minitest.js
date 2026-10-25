@@ -1,5 +1,5 @@
 // Mini-Test "Klassenarbeit üben": gemischte Fragen, am Ende Ergebnis und Wörter zum Nachüben.
-import { add, h, clear, icon, confirmDialog, shuffle, germanText } from '../ui.js';
+import { add, h, clear, icon, confirmDialog, shuffle, germanText, confetti } from '../ui.js';
 import { applyPracticeAnswer } from '../leitner.js';
 import { toDay } from '../dates.js';
 import { tts } from '../speech.js';
@@ -15,7 +15,7 @@ export function startMiniTest(root, { words, allWords, unitName, onExit }) {
   const counts = [10, 15, 20].filter((n) => n <= max);
   if (!counts.length) counts.push(max);
   clear(root);
-  add(root, 
+  add(root,
     h(
       'section',
       { class: 'minitest-setup card' },
@@ -44,7 +44,7 @@ async function runTest(root, { words, allWords, count, unitName, onExit }) {
   const counter = h('span', { class: 'progress-text' });
   const bar = h('div', { class: 'progress-fill' });
   const stage = h('section', { class: 'stage' });
-  add(root, 
+  add(root,
     h(
       'header',
       { class: 'session-bar' },
@@ -91,9 +91,10 @@ function showResult(root, { results, unitName, onExit, words, allWords }) {
   const message = share >= 0.9 ? 'Wow, fast alles richtig!' : share >= 0.7 ? 'Gut gemacht!' : 'Gut, dass du geübt hast! Mit den Wörtern unten wirst du noch sicherer.';
   const toPractice = results.filter((r) => r.grade !== 'correct').map((r) => r.word);
   play('done');
+  if (share >= 0.7) setTimeout(() => confetti(root), 50);
   clear(root);
   const promptOf = (r) => (r.type === 'type-en-de' || r.type === 'choice' ? r.word.english : r.type === 'listen-type' ? 'gehört' : r.type === 'cloze-type' ? r.word.exampleSentence : germanText(r.word));
-  add(root, 
+  add(root,
     h(
       'section',
       { class: 'summary minitest-result' },
@@ -108,7 +109,7 @@ function showResult(root, { results, unitName, onExit, words, allWords }) {
           h(
             'li',
             { class: `result ${r.grade}` },
-            h('span', { class: 'result-mark', 'aria-label': r.grade === 'correct' ? 'richtig' : r.grade === 'almost' ? 'fast richtig' : 'noch üben' }, r.grade === 'wrong' ? icon('target', { size: 20 }) : icon('check', { size: 20 })),
+            h('span', { class: 'result-mark', 'aria-label': r.grade === 'correct' ? 'richtig' : r.grade === 'almost' ? 'fast richtig' : 'noch üben' }, r.grade === 'wrong' ? icon('heart', { size: 20 }) : icon('check', { size: 20 })),
             h('span', { class: 'result-q' }, promptOf(r)),
             h('span', { class: 'result-a' }, r.grade === 'correct' ? r.given || r.expected : h('span', {}, r.given ? h('s', {}, r.given) : 'keine Antwort', ' ', h('strong', {}, r.expected))),
           ),

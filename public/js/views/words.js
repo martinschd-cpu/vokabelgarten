@@ -105,7 +105,7 @@ export async function render(view, { rerender }) {
     },
   });
 
-  add(view, 
+  add(view,
     h(
       'section',
       { class: 'words' },

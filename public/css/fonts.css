@@ -52,3 +52,17 @@
   font-display: swap;
   src: url('/vendor/fonts/opendyslexic-latin-700-normal.woff2') format('woff2');
 }
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/vendor/fonts/fredoka-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/vendor/fonts/fredoka-latin-600-normal.woff2') format('woff2');
+}

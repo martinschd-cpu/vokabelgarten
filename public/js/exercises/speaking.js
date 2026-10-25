@@ -9,7 +9,7 @@ export async function run(container, { word }) {
   const status = h('p', { class: 'speak-status', role: 'status' }, 'Hör zu und sprich dann nach.');
   const mic = h('button', { type: 'button', class: 'btn mic-btn', 'aria-label': 'Jetzt sprechen' }, icon('mic', { size: 40 }), 'Jetzt sprechen');
   const next = h('button', { type: 'button', class: 'btn primary big', hidden: true }, 'Weiter');
-  add(container, 
+  add(container,
     h('p', { class: 'exercise-title' }, 'Sprich nach!'),
     h('div', { class: 'prompt-card' }, h('p', { class: 'prompt-text', lang: 'en' }, word.english), word.phonetic ? h('p', { class: 'phonetic' }, `[${word.phonetic}]`) : null, h('p', { class: 'prompt-sub' }, germanText(word))),
     h('div', { class: 'listen-controls' }, h('button', { type: 'button', class: 'btn secondary', onclick: () => tts.speak(word.english) }, icon('speaker'), 'Anhören'), mic),

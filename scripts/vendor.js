@@ -21,6 +21,8 @@ const files = [
   ['@fontsource/nunito/files/nunito-latin-800-normal.woff2', 'fonts/nunito-latin-800-normal.woff2'],
   ['@fontsource/nunito/files/nunito-latin-ext-400-normal.woff2', 'fonts/nunito-latin-ext-400-normal.woff2'],
   ['@fontsource/nunito/files/nunito-latin-ext-700-normal.woff2', 'fonts/nunito-latin-ext-700-normal.woff2'],
+  ['@fontsource/fredoka/files/fredoka-latin-500-normal.woff2', 'fonts/fredoka-latin-500-normal.woff2'],
+  ['@fontsource/fredoka/files/fredoka-latin-600-normal.woff2', 'fonts/fredoka-latin-600-normal.woff2'],
   ['@fontsource/opendyslexic/files/opendyslexic-latin-400-normal.woff2', 'fonts/opendyslexic-latin-400-normal.woff2'],
   ['@fontsource/opendyslexic/files/opendyslexic-latin-700-normal.woff2', 'fonts/opendyslexic-latin-700-normal.woff2'],
 ];

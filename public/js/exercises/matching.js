@@ -21,7 +21,7 @@ export function run(container, { words }) {
       btn?.classList.add('selected');
     };
     for (const w of left) {
-      add(colL, 
+      add(colL,
         h('button', {
           type: 'button', class: 'match-item', lang: 'en', dataset: { id: w.id },
           onclick: (e) => {
@@ -32,7 +32,7 @@ export function run(container, { words }) {
       );
     }
     for (const w of right) {
-      add(colR, 
+      add(colR,
         h('button', {
           type: 'button', class: 'match-item', dataset: { id: w.id },
           onclick: (e) => {

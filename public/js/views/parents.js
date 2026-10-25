@@ -31,7 +31,7 @@ export async function render(view, ctx) {
     renderPinGate(view, secrets, ctx);
     return () => {};
   }
-  add(view, 
+  add(view,
     h(
       'section',
       { class: 'parents' },
@@ -131,7 +131,7 @@ async function renderOverview(panel) {
   const thisMonth = scanStats[month] ?? { scans: 0, costUsd: 0 };
   const exams = upcomingExams(units, today);
 
-  add(panel, 
+  add(panel,
     h(
       'div',
       { class: 'stat-grid' },
@@ -192,7 +192,7 @@ function unitStat(unit, words) {
 
 async function renderUnits(panel, ctx) {
   const [units, words] = await Promise.all([listUnits(), listWords()]);
-  add(panel, 
+  add(panel,
     h('div', { class: 'row' },
       h('button', { type: 'button', class: 'btn primary', onclick: async () => { if (await editUnit(null)) ctx.rerender(); } }, icon('plus'), 'Neue Unit'),
       h('button', { type: 'button', class: 'btn secondary', onclick: async () => { if (await editWord({ units, allowDelete: true })) { toast('Gespeichert.'); ctx.rerender(); } } }, icon('plus'), 'Neues Wort')),
@@ -382,7 +382,7 @@ async function renderSettings(panel) {
   const codeInput = h('input', { id: 's-code', class: 'input', type: 'password', autocomplete: 'off', placeholder: 'neuer App-Code' });
   const ocrStatus = h('span', { class: 'hint' }, s.ocrReady ? 'Ist auf dem Gerät gespeichert.' : 'Noch nicht heruntergeladen.');
 
-  add(panel, 
+  add(panel,
     h('h2', {}, 'Lernen'),
     num('s-new', 'Neue Wörter pro Tag', s.newPerDay, 1, 30, (v) => save({ newPerDay: v }), 'Standard: 8. Vor einer Klassenarbeit können es automatisch mehr werden.'),
     num('s-min', 'Zielzeit pro Tag (Minuten)', s.targetMinutes, 5, 40, (v) => save({ targetMinutes: v }), 'Ist die Portion länger, werden neue Wörter und zuletzt Wiederholungen auf morgen verschoben.'),
@@ -471,7 +471,7 @@ async function renderData(panel, ctx) {
       storageInfo.textContent = `Belegt: ca. ${Math.round((usage ?? 0) / 1e6)} MB. ${persisted ? 'Der Speicher ist dauerhaft geschützt.' : 'Der Browser darf den Speicher bei Platzmangel leeren. Regelmäßige Backups helfen.'}`;
     });
   }
-  add(panel, 
+  add(panel,
     h('h2', {}, 'Backup'),
     h('p', {}, 'Ein Backup enthält alle Units, Wörter, Lernstände und Einstellungen (ohne App-Code und PIN). So geht beim Gerätewechsel nichts verloren.'),
     h('label', { class: 'check', for: 'd-photos' }, includePhotos, 'Fotos mitsichern (Datei wird größer)'),

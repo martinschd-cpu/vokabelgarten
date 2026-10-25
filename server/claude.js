@@ -4,7 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { SCAN_SCHEMA, ENRICH_SCHEMA, parseScanResult, parseEnrichResult, ScanParseError } from './scanSchema.js';
 import { SCAN_SYSTEM_PROMPT, SCAN_USER_PROMPT, ENRICH_SYSTEM_PROMPT } from './prompts.js';
 
-export const DEFAULT_MODEL = 'claude-opus-5-5';
+export const DEFAULT_MODEL = 'claude-sonnet-5-5';
 
 // Modelle, die serverseitige Ausweichmodelle bei einer Ablehnung unterstützen.
 const FALLBACK_MODELS = new Set(['claude-opus-5-5', 'claude-opus-5', 'claude-fable-5-1', 'claude-sonnet-5-5']);

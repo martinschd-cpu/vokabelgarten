@@ -73,6 +73,15 @@ test('Ergänzen-Anfrage enthält die Wörter', async () => {
   assert.equal(r.items[0].exampleSentenceDe, 'Ich habe einen Hund.');
 });
 
+test('Standardmodell ist Claude Sonnet 5.5 mit Ausweichmodell', async () => {
+  const sink = [];
+  const svc = createClaudeService({ client: fakeClient(okResponse({ unitTitle: '', entries: [], notes: '' }), sink) });
+  await svc.scan([{ mediaType: 'image/jpeg', data: 'A' }]);
+  assert.equal(svc.model, 'claude-sonnet-5-5');
+  assert.equal(sink[0].model, 'claude-sonnet-5-5');
+  assert.equal(sink[0].fallbacks, 'default');
+});
+
 test('Kostenschätzung', () => {
   assert.equal(estimateCostUsd('claude-opus-5-5', { input_tokens: 1_000_000, output_tokens: 0 }), 4);
   assert.equal(estimateCostUsd('unbekannt', { input_tokens: 1 }), null);

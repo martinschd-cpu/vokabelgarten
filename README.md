@@ -50,7 +50,7 @@ Hinweis: Kamera, Service Worker und Installation funktionieren nur über `https:
 | --- | --- | --- |
 | `ANTHROPIC_API_KEY` | ja | Claude API Key aus der [Claude Console](https://platform.claude.com/). Liegt nur auf dem Server. |
 | `APP_ACCESS_CODE` | ja | Geheimer App-Code. Ohne ihn lehnt der Server alle API-Anfragen ab. Lang und zufällig wählen, z. B. 20 Zeichen. |
-| `CLAUDE_MODEL` | nein | Modell für Erkennung und Beispielsätze. Standard: `claude-opus-5-5` (laut aktueller Anthropic-Dokumentation der empfohlene Startpunkt, alle aktuellen Modelle können Bilder lesen). Günstiger: `claude-sonnet-5-5` oder `claude-haiku-5-5`. |
+| `CLAUDE_MODEL` | nein | Modell für Erkennung und Beispielsätze. Standard: `claude-sonnet-5-5` (schnell, gutes Preis-Leistungs-Verhältnis, liest Bilder zuverlässig). Genauer bei schwierigen Fotos: `claude-opus-5-5` (laut Anthropic-Dokumentation der allgemeine Startpunkt). Am günstigsten: `claude-haiku-5-5`. Alle aktuellen Modelle können Bilder lesen. |
 | `CLAUDE_EFFORT` | nein | Denkaufwand: `low`, `medium` (Standard), `high`. Leer setzen, um den Modellstandard zu nutzen. Für ältere Modelle ohne Effort-Unterstützung leer lassen. |
 | `PORT` | nein | Setzt Railway automatisch. Lokal Standard 3000. |
 | `SCAN_LIMIT_PER_HOUR` | nein | Scans pro Stunde, Standard 30. |
@@ -102,16 +102,16 @@ Tipps für gute Fotos: gerade von oben, gutes Licht ohne Schatten, nur die Vokab
 
 ## Kosten pro Scan
 
-Grobe Schätzung mit `claude-opus-5-5` (4 US-Dollar pro Mio. Eingabe-Tokens, 20 US-Dollar pro Mio. Ausgabe-Tokens):
+Grobe Schätzung mit dem Standardmodell `claude-sonnet-5-5` (2 US-Dollar pro Mio. Eingabe-Tokens, 10 US-Dollar pro Mio. Ausgabe-Tokens):
 
 | | Tokens | Kosten |
 | --- | --- | --- |
-| Ein Foto (ca. 1568 x 1176 Pixel) | ca. 2.500 Eingabe | ca. 0,01 $ |
-| Anweisungen | ca. 800 Eingabe | ca. 0,003 $ |
-| Antwort mit ca. 25 Vokabeln (inkl. Denken) | ca. 2.500 bis 4.000 Ausgabe | ca. 0,05 bis 0,08 $ |
-| **Summe pro Scan (1 Foto)** | | **ca. 6 bis 10 Cent** |
+| Ein Foto (ca. 1568 x 1176 Pixel) | ca. 2.500 Eingabe | ca. 0,005 $ |
+| Anweisungen | ca. 800 Eingabe | ca. 0,002 $ |
+| Antwort mit ca. 25 Vokabeln (inkl. Denken) | ca. 2.500 bis 4.000 Ausgabe | ca. 0,025 bis 0,04 $ |
+| **Summe pro Scan (1 Foto)** | | **ca. 3 bis 5 Cent** |
 
-Mit `claude-sonnet-5-5` etwa die Hälfte, mit `claude-haiku-5-5` deutlich unter 1 Cent (dafür eventuell ungenauer bei schwierigen Fotos). "Beispielsätze ergänzen" kostet pro Unit etwa 2 bis 4 Cent. Die App zeigt unter Eltern, Übersicht die Zahl der Scans im Monat und eine Kostenschätzung. Zusätzlich kannst du in der Claude Console ein Ausgabenlimit setzen.
+Mit `claude-opus-5-5` etwa doppelt so viel, mit `claude-haiku-5-5` deutlich unter 1 Cent (dafür eventuell ungenauer bei schwierigen Fotos). "Beispielsätze ergänzen" kostet pro Unit etwa 1 bis 2 Cent. Die App zeigt unter Eltern, Übersicht die Zahl der Scans im Monat und eine Kostenschätzung. Zusätzlich kannst du in der Claude Console ein Ausgabenlimit setzen.
 
 ## Lernlogik
 

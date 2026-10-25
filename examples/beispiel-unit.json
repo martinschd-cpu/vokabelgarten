@@ -1,0 +1,383 @@
+{
+  "app": "vokabelgarten",
+  "format": 1,
+  "exportedAt": "2026-10-25T00:00:00.000Z",
+  "units": [
+    {
+      "id": "beispielunit1",
+      "name": "Beispiel-Unit: Mein Alltag",
+      "note": "Beispieldaten zum Ausprobieren",
+      "examDate": null,
+      "order": 0
+    }
+  ],
+  "words": [
+    {
+      "id": "beispiel01",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 0,
+      "english": "family",
+      "phonetic": "ˈfæməli",
+      "german": [
+        "die Familie"
+      ],
+      "exampleSentence": "My family is very big.",
+      "exampleSentenceDe": "Meine Familie ist sehr groß.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel02",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 1,
+      "english": "brother",
+      "phonetic": "ˈbrʌðə",
+      "german": [
+        "der Bruder"
+      ],
+      "exampleSentence": "My brother is ten years old.",
+      "exampleSentenceDe": "Mein Bruder ist zehn Jahre alt.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel03",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 2,
+      "english": "sister",
+      "phonetic": "ˈsɪstə",
+      "german": [
+        "die Schwester"
+      ],
+      "exampleSentence": "My sister likes horses.",
+      "exampleSentenceDe": "Meine Schwester mag Pferde.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel04",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 3,
+      "english": "parents",
+      "phonetic": "ˈpeərənts",
+      "german": [
+        "die Eltern"
+      ],
+      "exampleSentence": "My parents work in a shop.",
+      "exampleSentenceDe": "Meine Eltern arbeiten in einem Laden.",
+      "wordType": "pl"
+    },
+    {
+      "id": "beispiel05",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 4,
+      "english": "grandma",
+      "phonetic": "ˈɡrænmɑː",
+      "german": [
+        "die Oma"
+      ],
+      "exampleSentence": "Grandma makes great cakes.",
+      "exampleSentenceDe": "Oma backt tolle Kuchen.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel06",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 5,
+      "english": "school",
+      "phonetic": "skuːl",
+      "german": [
+        "die Schule"
+      ],
+      "exampleSentence": "Our school has a big garden.",
+      "exampleSentenceDe": "Unsere Schule hat einen großen Garten.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel07",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 6,
+      "english": "teacher",
+      "phonetic": "ˈtiːtʃə",
+      "german": [
+        "der Lehrer",
+        "die Lehrerin"
+      ],
+      "exampleSentence": "Our teacher is very nice.",
+      "exampleSentenceDe": "Unsere Lehrerin ist sehr nett.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel08",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 7,
+      "english": "classroom",
+      "phonetic": "ˈklɑːsruːm",
+      "german": [
+        "das Klassenzimmer"
+      ],
+      "exampleSentence": "The classroom is on the first floor.",
+      "exampleSentenceDe": "Das Klassenzimmer ist im ersten Stock.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel09",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 8,
+      "english": "homework",
+      "phonetic": "ˈhəʊmwɜːk",
+      "german": [
+        "die Hausaufgaben"
+      ],
+      "exampleSentence": "I do my homework after lunch.",
+      "exampleSentenceDe": "Ich mache meine Hausaufgaben nach dem Mittagessen.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel10",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 9,
+      "english": "pencil case",
+      "phonetic": "ˈpensl keɪs",
+      "german": [
+        "das Federmäppchen"
+      ],
+      "exampleSentence": "My pencil case is blue.",
+      "exampleSentenceDe": "Mein Federmäppchen ist blau.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel11",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 10,
+      "english": "to read",
+      "phonetic": "riːd",
+      "german": [
+        "lesen"
+      ],
+      "exampleSentence": "I like to read comics.",
+      "exampleSentenceDe": "Ich lese gern Comics.",
+      "wordType": "v"
+    },
+    {
+      "id": "beispiel12",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 11,
+      "english": "to write",
+      "phonetic": "raɪt",
+      "german": [
+        "schreiben"
+      ],
+      "exampleSentence": "Please write your name here.",
+      "exampleSentenceDe": "Bitte schreib deinen Namen hierhin.",
+      "wordType": "v"
+    },
+    {
+      "id": "beispiel13",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 12,
+      "english": "friend",
+      "phonetic": "frend",
+      "german": [
+        "der Freund",
+        "die Freundin"
+      ],
+      "exampleSentence": "Tom is my best friend.",
+      "exampleSentenceDe": "Tom ist mein bester Freund.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel14",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 13,
+      "english": "dog",
+      "phonetic": "dɒɡ",
+      "german": [
+        "der Hund"
+      ],
+      "exampleSentence": "Our dog loves the park.",
+      "exampleSentenceDe": "Unser Hund liebt den Park.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel15",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 14,
+      "english": "cat",
+      "phonetic": "kæt",
+      "german": [
+        "die Katze"
+      ],
+      "exampleSentence": "The cat is sleeping on the sofa.",
+      "exampleSentenceDe": "Die Katze schläft auf dem Sofa.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel16",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 15,
+      "english": "rabbit",
+      "phonetic": "ˈræbɪt",
+      "german": [
+        "das Kaninchen"
+      ],
+      "exampleSentence": "My rabbit eats carrots.",
+      "exampleSentenceDe": "Mein Kaninchen frisst Karotten.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel17",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 16,
+      "english": "bird",
+      "phonetic": "bɜːd",
+      "german": [
+        "der Vogel"
+      ],
+      "exampleSentence": "A bird is singing in the tree.",
+      "exampleSentenceDe": "Ein Vogel singt im Baum.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel18",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 17,
+      "english": "horse",
+      "phonetic": "hɔːs",
+      "german": [
+        "das Pferd"
+      ],
+      "exampleSentence": "She rides a horse on Saturdays.",
+      "exampleSentenceDe": "Sie reitet samstags auf einem Pferd.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel19",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 18,
+      "english": "breakfast",
+      "phonetic": "ˈbrekfəst",
+      "german": [
+        "das Frühstück"
+      ],
+      "exampleSentence": "I have breakfast at seven o'clock.",
+      "exampleSentenceDe": "Ich frühstücke um sieben Uhr.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel20",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 19,
+      "english": "apple",
+      "phonetic": "ˈæpl",
+      "german": [
+        "der Apfel"
+      ],
+      "exampleSentence": "An apple a day is good for you.",
+      "exampleSentenceDe": "Ein Apfel am Tag tut dir gut.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel21",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 20,
+      "english": "bread",
+      "phonetic": "bred",
+      "german": [
+        "das Brot"
+      ],
+      "exampleSentence": "We buy bread at the bakery.",
+      "exampleSentenceDe": "Wir kaufen Brot in der Bäckerei.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel22",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 21,
+      "english": "cheese",
+      "phonetic": "tʃiːz",
+      "german": [
+        "der Käse"
+      ],
+      "exampleSentence": "I like cheese on my sandwich.",
+      "exampleSentenceDe": "Ich mag Käse auf meinem Sandwich.",
+      "wordType": "n"
+    },
+    {
+      "id": "beispiel23",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 22,
+      "english": "hungry",
+      "phonetic": "ˈhʌŋɡri",
+      "german": [
+        "hungrig"
+      ],
+      "exampleSentence": "After school I am always hungry.",
+      "exampleSentenceDe": "Nach der Schule bin ich immer hungrig.",
+      "wordType": "adj"
+    },
+    {
+      "id": "beispiel24",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 23,
+      "english": "nice",
+      "phonetic": "naɪs",
+      "german": [
+        "nett",
+        "schön"
+      ],
+      "exampleSentence": "The weather is nice today.",
+      "exampleSentenceDe": "Das Wetter ist heute schön.",
+      "wordType": "adj"
+    },
+    {
+      "id": "beispiel25",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 24,
+      "english": "to help sb.",
+      "phonetic": "help",
+      "german": [
+        "jdm. helfen"
+      ],
+      "exampleSentence": "Can you help me, please?",
+      "exampleSentenceDe": "Kannst du mir bitte helfen?",
+      "wordType": "v"
+    },
+    {
+      "id": "beispiel26",
+      "unitId": "beispielunit1",
+      "source": "import",
+      "order": 25,
+      "english": "to look for sth.",
+      "phonetic": "lʊk fə",
+      "german": [
+        "etw. suchen"
+      ],
+      "exampleSentence": "I am looking for my keys.",
+      "exampleSentenceDe": "Ich suche meine Schlüssel.",
+      "wordType": "v"
+    }
+  ]
+}

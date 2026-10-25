@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="de" data-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Vokabelgarten</title>
+    <meta name="description" content="Englisch-Vokabeln lernen, jeden Tag ein kleines Stück." />
+    <meta name="theme-color" content="#2e7d4f" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#142019" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Vokabeln" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <script type="module" src="/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#view">Zum Inhalt springen</a>
+    <div id="offline-banner" role="status" hidden>Du bist offline. Lernen klappt trotzdem.</div>
+    <main id="view" tabindex="-1"></main>
+    <div id="toasts" aria-live="polite"></div>
+    <div id="live" class="visually-hidden" aria-live="assertive"></div>
+    <noscript><p class="noscript">Bitte JavaScript einschalten, damit Vokabelgarten funktioniert.</p></noscript>
+  </body>
+</html>
